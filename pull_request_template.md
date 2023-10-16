@@ -29,12 +29,12 @@ Provide any additional information, context, or details that you think the revie
 
 ## Reviewers
 
-- @contributor1
-- @contributor2
-- @contributor3
-- @contributor4
-- @contributor5
-- @contributor6
+- @funsav3r
+- @IrascibleMidnight
+- @juhi1103
+- @ilgincevik
+- @tihardy
+- @erinaperez
 - @contributor7
 - @contributor8
 
