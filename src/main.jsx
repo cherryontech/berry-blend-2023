@@ -16,7 +16,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    {/* does <App /> need taken out altogether or can it stay where it is for now? */}
     <App /> 
   </React.StrictMode>,
 )
