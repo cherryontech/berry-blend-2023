@@ -1,29 +1,28 @@
-import './App.css'
-import { 
-  Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider
-   } 
-  from 'react-router-dom';
-  import ErrorPage from "./routes/ErrorPage.jsx";
-import './index.css';
-import About from './routes/About.jsx';
-import Resources from './routes/Resources.jsx';
-import { Layout } from './Layouts/layout.jsx';
 
+import { Routes, Route } from 'react-router-dom';
+import Home from './routes/Home';
+import ErrorPage from './routes/ErrorPage';
+import Resources from './routes/Resources';
+import Questions from './routes/Questions';
+import Recs from './routes/Recs';
+import NavBar from './components/NavBar';
+import "./index.css";
 
-const router = createBrowserRouter( createRoutesFromElements(
-  <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
-    <Route path="/" element={<App />}></Route>
-    <Route path="/About" element={<About />}></Route>
-    <Route path="/Resources" element={<Resources />}></Route> 
-  </Route>
-))
+const App = () => {
+ return (
+   <div>
+    <NavBar />
+       <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/Resources" element={<Resources />} />
+          <Route path="/Questions" element={<Questions />} />
+          <Route path="/Recs" element={<Recs />} />
+          <Route path='*' element={<ErrorPage />}/>
+       </Routes>
+   </div>
+    
+    
+ );
+};
 
-
-function App() {
-return(<RouterProvider router={router} />)
-}
-
-export default App
+export default App;

@@ -1,0 +1,168 @@
+
+
+body {
+    margin: 0;
+} 
+ul.topnav { 
+    list-style-type: none; 
+    margin: 0; padding: 0; 
+    overflow: hidden; 
+    background-color: unset ; 
+} 
+ul.topnav li {
+    float: left;
+}
+
+.landing-page .overlap {
+    height: 520px;
+    left: -142px;
+    position: absolute;
+    top: 120px;
+    width: 1563px;
+  }
+  
+  .landing-page .overlap-2 {
+    height: 520px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1563px;
+  }
+  
+  .landing-page .heading {
+    height: 130px;
+    left: 292px;
+    position: absolute;
+    top: 136px;
+    width: 984px;
+  }
+  
+  .landing-page .p {
+    color: #25171a;
+    font-family: "Oxygen-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 90px;
+    width: 980px;
+  }
+  
+  .landing-page .text-wrapper-3 {
+    color: #25171a;
+    font-family: "Quicksand-Bold", Helvetica;
+    font-size: 64px;
+    font-weight: 700;
+    left: 229px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 521px;
+  }
+  
+  .landing-page .div-2 {
+    height: 513px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 352px;
+  }
+  
+  .landing-page .overlap-3 {
+    height: 513px;
+    position: relative;
+  }
+  
+  .landing-page .ellipse {
+    background-color: #86dee4;
+    border-radius: 93.5px;
+    height: 187px;
+    left: 165px;
+    position: absolute;
+    top: 166px;
+    width: 187px;
+  }
+  
+  .landing-page .ellipse-2 {
+    background-color: #86e4b1;
+    border-radius: 93.5px;
+    height: 187px;
+    left: 36px;
+    position: absolute;
+    top: 326px;
+    width: 187px;
+  }
+  
+  .landing-page .ellipse-3 {
+    background-color: #8786e4;
+    border-radius: 129.5px;
+    height: 259px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 259px;
+  }
+  
+  .landing-page .ellipse-4 {
+    background-color: #86abe4;
+    border-radius: 48px;
+    height: 96px;
+    left: 256px;
+    position: absolute;
+    top: 358px;
+    width: 96px;
+  }
+  
+  .landing-page .overlap-wrapper {
+    height: 513px;
+    left: 1211px;
+    position: absolute;
+    top: 7px;
+    transform: rotate(180deg);
+    width: 352px;
+  }
+  
+  .landing-page .ellipse-5 {
+    background-color: #86dee4;
+    border-radius: 93.5px;
+    height: 187px;
+    left: 165px;
+    position: absolute;
+    top: 160px;
+    width: 187px;
+  }
+  
+  .landing-page .ellipse-6 {
+    background-color: #86e4b1;
+    border-radius: 93.5px;
+    height: 187px;
+    left: 36px;
+    position: absolute;
+    top: 0;
+    width: 187px;
+  }
+  
+  .landing-page .ellipse-7 {
+    background-color: #8786e4;
+    border-radius: 129.5px;
+    height: 259px;
+    left: 0;
+    position: absolute;
+    top: 254px;
+    width: 259px;
+  }
+  
+  .landing-page .ellipse-8 {
+    background-color: #86abe4;
+    border-radius: 48px;
+    height: 96px;
+    left: 256px;
+    position: absolute;
+    top: 59px;
+    width: 96px;
+  }
