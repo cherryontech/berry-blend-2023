@@ -1,0 +1,18 @@
+/* this file contains global CSS styles that apply to the entire application */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ul li a {
+  color: #000;
+ }
+ 
+ ul li a:hover {
+  color: #00a8ff;
+ }
+ 
+ ul li a.active {
+  color: #00a8ff;
+ } */
