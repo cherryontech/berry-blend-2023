@@ -1,8 +1,6 @@
-/* this file contains global CSS styles that apply to the entire application */
-
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 .landing-page .overlap {
   height: 520px;
@@ -157,16 +155,3 @@
   top: 59px;
   width: 96px;
 }
-
-/* 
-ul li a {
-  color: #000;
- }
- 
- ul li a:hover {
-  color: #00a8ff;
- }
- 
- ul li a.active {
-  color: #00a8ff;
- } */
