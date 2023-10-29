@@ -1,5 +1,11 @@
+import Greeting from '../components/Greeting.jsx';
 
+const Questions = () => {
+  return (
+    <div>
+      <Greeting />
+    </div>
+  );
+};
 
-const Questions = () => <h1>Questions Page</h1>
-
-export default Questions
+export default Questions;
