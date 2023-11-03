@@ -1,5 +1,9 @@
 /* styles specific to the app/home page */
 
+h1 {
+  color: red;
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
