@@ -1,9 +1,11 @@
-import '../styles/Home.css'
+import React from 'react';
+import '../styles/style.css';
+import '../styles/Home.css';
 
 export default function Home() {
-    return (
-        <>
-        <div className="overlap">
+  return (
+    <>
+      <div className="landing-page overlap">
         <div className="overlap-2">
           <div className="heading">
             <p className="p">Take a break, you deserve it.</p>
@@ -32,8 +34,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </div>
-        </>
-        
-    )
+      </div>
+    </>
+  );
 }
