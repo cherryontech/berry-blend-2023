@@ -1,61 +1,157 @@
 /* styles specific to the app/home page */
 
-h1 {
-  color: red;
+.nav--container {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Oxygen', sans-serif;
+}
+.nav--links {
+  display: flex;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* CSS Styling of Left Side Circles  */
+.box {
+  height: 513px;
+  width: 352px;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  transform: translateX(-30%);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.box .group {
+  height: 513px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 352px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box .overlap {
+  height: 513px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.box .overlap-group {
+  height: 513px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 352px;
 }
 
-.card {
-  padding: 2em;
+.box .ellipse {
+  background-color: #86dee4;
+  border-radius: 93.5px;
+  height: 187px;
+  left: 165px;
+  position: absolute;
+  top: 166px;
+  width: 187px;
 }
 
-.read-the-docs {
-  color: #888;
-} */
+.box .div {
+  background-color: #86e4b1;
+  border-radius: 93.5px;
+  height: 187px;
+  left: 36px;
+  position: absolute;
+  top: 326px;
+  width: 187px;
+}
 
+.box .ellipse-2 {
+  background-color: #8786e4;
+  border-radius: 129.5px;
+  height: 259px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 259px;
+}
 
-/* ul.topnav { 
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
-  overflow: hidden; 
-  background-color: unset ; 
-} 
-ul.topnav li {
-  float: left;
-}  */
+.box .ellipse-3 {
+  background-color: #86abe4;
+  border-radius: 48px;
+  height: 96px;
+  left: 256px;
+  position: absolute;
+  top: 358px;
+  width: 96px;
+}
 
+/* CSS Styling of Circles Right Side of Page */
+.box--two {
+  height: 513px;
+  width: 352px;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  transform: translateX(30%);
+}
+
+.box--two .group--two {
+  height: 513px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: rotate(180deg);
+  width: 352px;
+}
+
+.box--two .overlap--two {
+  height: 513px;
+  position: relative;
+}
+
+.box--two .overlap-group--two {
+  height: 513px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 352px;
+}
+
+.box--two .ellipse--two {
+  background-color: #86dee4;
+  border-radius: 93.5px;
+  height: 187px;
+  left: 165px;
+  position: absolute;
+  top: 160px;
+  width: 187px;
+}
+
+.box--two .div--two {
+  background-color: #86e4b1;
+  border-radius: 93.5px;
+  height: 187px;
+  left: 36px;
+  position: absolute;
+  top: 0;
+  width: 187px;
+}
+
+.box--two .ellipse-2--two {
+  background-color: #8786e4;
+  border-radius: 129.5px;
+  height: 259px;
+  left: 0;
+  position: absolute;
+  top: 254px;
+  width: 259px;
+}
+
+.box--two .ellipse-3-two {
+  background-color: #86abe4;
+  border-radius: 48px;
+  height: 96px;
+  left: 256px;
+  position: absolute;
+  top: 59px;
+  width: 96px;
+}
