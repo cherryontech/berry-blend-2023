@@ -3,34 +3,34 @@ import '../Home.css';
 import HomeButton from '../components/buttons/HomeButton';
 import Greeting from '../components/Greeting.jsx';
 
-const BoxOne = () => {
+const CirlceStyleLeft = () => {
   return (
-    <div className="box">
-      <div className="group">
-        <div className="overlap">
-          <div className="overlap-group">
-            <div className="ellipse" />
-            <div className="div" />
-            <div className="ellipse-2" />
+    <div className="circles-container-left">
+      <div className="circles-group-left">
+        <div className="overlap-left">
+          <div className="overlap-group-left">
+            <div className="ellipse-left" />
+            <div className="ellipse-2-left" />
+            <div className="ellipse-3-left" />
           </div>
-          <div className="ellipse-3" />
+          <div className="ellipse-4-left" />
         </div>
       </div>
     </div>
   );
 };
 
-const BoxTwo = () => {
+const CircleStyleRight = () => {
   return (
-    <div className="box--two">
-      <div className="group--two">
-        <div className="overlap--two">
-          <div className="overlap-group--two">
-            <div className="ellipse--two" />
-            <div className="div--two" />
-            <div className="ellipse-2--two" />
+    <div className="circles-container-right">
+      <div className="circles-group-right">
+        <div className="overlap-right">
+          <div className="overlap-group-right">
+            <div className="ellipse-right" />
+            <div className="ellipse-2-right" />
+            <div className="ellipse-3-right" />
           </div>
-          <div className="ellipse-3--two" />
+          <div className="ellipse-4-right" />
         </div>
       </div>
     </div>
@@ -42,8 +42,8 @@ export default function Home() {
     <div className="homepage--container">
       <Greeting />
       <HomeButton />
-      <BoxOne />
-      <BoxTwo />
+      <CirlceStyleLeft />
+      <CircleStyleRight />
     </div>
   );
 }
