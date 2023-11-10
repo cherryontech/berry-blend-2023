@@ -1,4 +1,4 @@
-const timeOfDay = () => {
+const TimeOfDay = () => {
   let myDate = new Date();
   let hours = myDate.getHours();
   let greet;
@@ -12,7 +12,9 @@ const timeOfDay = () => {
 const DefaultGreeting = () => {
   return (
     <div>
-      <h1 className="main--greeting">Good</h1>
+      <h1 className="main--greeting">
+        Good <TimeOfDay />
+      </h1>
       <p className="sub--greeting">Take a break, you deserve it.</p>
     </div>
   );

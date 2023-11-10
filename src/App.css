@@ -1,5 +1,6 @@
-/* styles specific to the app/home page */
+/* styles specific to the app page */
 
+/* navigation bar styling  */
 .nav--container {
   display: flex;
   justify-content: space-between;
@@ -7,12 +8,23 @@
 }
 .nav--links {
   display: flex;
-  list-style: none;
+  margin-top: 2.5rem;
+  margin-right: 4.6875rem;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
 }
 
+.navLink--style {
+  list-style-type: none;
+  text-decoration: none;
+  color: #333;
+  margin-right: 1rem;
+}
+
+.navLink--style:hover {
+  color: #a486e4;
+}
 /* CSS Styling of Left Side Circles  */
 .circles-container-left {
   height: 513px;
@@ -155,3 +167,11 @@
   top: 59px;
   width: 96px;
 }
+
+/* Media Queries for different screen sizes */
+@media (min-width: 640px) {
+}
+/* @media (min-width: 768px) { ... }
+@media (min-width: 1024px) { ... }
+@media (min-width: 1280px) { ... }
+@media (min-width: 1536px) { ... } */
