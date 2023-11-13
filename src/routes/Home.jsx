@@ -1,39 +1,49 @@
-import '../styles/Home.css'
+import React from 'react';
+import '../Home.css';
+import HomeButton from '../components/buttons/HomeButton';
+import Greeting from '../components/Greeting.jsx';
+
+const CirlceStyleLeft = () => {
+  return (
+    <div className="circles-container-left">
+      <div className="circles-group-left">
+        <div className="overlap-left">
+          <div className="overlap-group-left">
+            <div className="ellipse-left" />
+            <div className="ellipse-2-left" />
+            <div className="ellipse-3-left" />
+          </div>
+          <div className="ellipse-4-left" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CircleStyleRight = () => {
+  return (
+    <div className="circles-container-right">
+      <div className="circles-group-right">
+        <div className="overlap-right">
+          <div className="overlap-group-right">
+            <div className="ellipse-right" />
+            <div className="ellipse-2-right" />
+            <div className="ellipse-3-right" />
+          </div>
+          <div className="ellipse-4-right" />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
-    return (
-        <>
-        <div className="overlap">
-        <div className="overlap-2">
-          <div className="heading">
-            <p className="p">Take a break, you deserve it.</p>
-            <div className="text-wrapper-3">Good Afternoon!</div>
-          </div>
-
-          <div className="div-2">
-            <div className="overlap-3">
-              <div className="div-2">
-                <div className="ellipse" />
-                <div className="ellipse-2" />
-                <div className="ellipse-3" />
-              </div>
-              <div className="ellipse-4" />
-            </div>
-          </div>
-
-          <div className="overlap-wrapper">
-            <div className="overlap-3">
-              <div className="div-2">
-                <div className="ellipse-5" />
-                <div className="ellipse-6" />
-                <div className="ellipse-7" />
-              </div>
-              <div className="ellipse-8" />
-            </div>
-          </div>
-        </div>
-        </div>
-        </>
-        
-    )
+  return (
+    <div className="homepage--container">
+      <Greeting />
+      <HomeButton />
+      <CirlceStyleLeft />
+      <CircleStyleRight />
+    </div>
+  );
 }
