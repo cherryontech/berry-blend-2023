@@ -1,5 +1,4 @@
 /* this file contains global CSS styles that apply to the entire application */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
