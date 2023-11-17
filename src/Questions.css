@@ -8,35 +8,44 @@
   align-items: center;
   text-align: center;
 }
+
 .main--text {
   font-family: 'Quicksand', sans-serif;
-  font-size: 4rem;
 }
+
+.question--container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0; /* Blue-gray background color */
+}
+
 .sub--text {
   font-family: 'Oxygen', sans-serif;
-  font-size: 3rem;
 }
 
-.radio--button {
+.answer--options {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 2.5rem;
-  margin: 1rem;
 }
 
-.recs--button {
-  height: 6.25rem;
-  width: 32.5rem;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem;
-  border-radius: 0.625rem;
-  border: 2px #a486e4;
-  background-color: #a486e4;
-  color: white;
-  filter: drop-shadow(0px 4px 2px #00000040);
+.answer--button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: black;
   cursor: pointer;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+}
+
+.answer--button:hover {
+  color: #8a5bf2; /* Light purple text on hover */
+}
+
+.answer--button.selected {
+  color: #8a5bf2; /* Purple text for selected answer */
+  border: 2px solid #8a5bf2; /* Purple border for selected answer */
+  border-radius: 50%; /* Rounded border for selected answer */
 }

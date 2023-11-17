@@ -4,20 +4,21 @@ const QuestionBank = ({ index, question, onAnswer }) => {
   const [selectedValue, setSelectedValue] = useState(null);
 
   const handleButtonClick = (value) => {
+    const pointsValue = value;
     setSelectedValue(value);
-    onAnswer(index, value);
+    onAnswer(index, pointsValue);
   };
 
   return (
-    <div className="questions--container">
+    <div className="question--container">
       <div className="sub--text">
         <p>{question}</p>
-        <div className="radio--button">
+        <div className="answer--buttons">
           {[1, 2, 3, 4, 5].map((value) => (
             <button
               key={value}
               onClick={() => handleButtonClick(value)}
-              className={selectedValue === value ? 'selected' : ''}
+              className={`answer-button ${selectedValue === value ? 'selected' : ''}`}
             >
               {value}
             </button>

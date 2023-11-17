@@ -7,9 +7,14 @@ const Questions = () => {
   const [points, setPoints] = useState(Array(5).fill(0));
 
   const handleAnswer = (questionIndex, pointsValue) => {
-    const newPoints = [...points];
-    newPoints[questionIndex] = pointsValue;
-    setPoints(newPoints);
+    const currentPointsValue = points[questionIndex];
+
+    // Check if the selected value is different from the current value
+    if (currentPointsValue !== pointsValue) {
+      const newPoints = [...points];
+      newPoints[questionIndex] = pointsValue;
+      setPoints(newPoints);
+    }
   };
 
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
