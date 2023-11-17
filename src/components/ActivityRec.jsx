@@ -6,7 +6,7 @@ export default function ActivityRec() {
     <div className="activity--container">
       <section className="activity-rec-box">
         <div className="image--container">
-          <img alt="activity-recommendation based on burnout score" src="#" />
+          <img alt="" src="#" />
         </div>
         <div className="activity-info-container">
           <h3 className="activity--title">Activity Name</h3>
