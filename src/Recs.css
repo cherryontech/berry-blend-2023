@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+/* HEADER STYLING FOR RECOMMENDATION PAGE */
+
+.rec--header {
+  text-align: center;
+  margin-top: 7.1875rem;
+  position: relative;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+.rec--header h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.rec--header p {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+/* STYLING FOR ACTIVITY RECOMMENDATION COMPONENTS */
+.activity--container {
+  height: 26.25rem;
+  width: 58.125rem;
+  margin: auto;
+}
+.activity-rec-box {
+  display: flex;
+  margin-top: 4rem;
+  box-shadow: 0px 4px 4px #00000040;
+  border-radius: 0.9375rem;
+}
+.image--container {
+  height: 26.25rem;
+  width: 23.125rem;
+  background-color: grey;
+  border-radius: 0.9375rem 0 0 0.9375rem;
+  height: 423px;
+  width: 369px;
+}
+.activity-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 35.3125rem;
+  background-color: #d8e8f2;
+  border-radius: 0 0.9375rem 0.9375rem 0;
+  font-family: 'Oxygen', sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.activity--title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.activity--duration {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.activity--equipment {
+  margin-top: 0;
+}
+.calendar--export {
+  height: 5.3125rem;
+  width: 31.25rem;
+  margin-top: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  border-radius: 0.625rem;
+  border: #a486e4;
+  background-color: #a486e4;
+  color: white;
+  filter: drop-shadow(0px 4px 2px #00000040);
+  cursor: pointer;
+}
