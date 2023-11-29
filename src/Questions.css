@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.questions--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main--text {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.question--container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0; /* Blue-gray background color */
+}
+
+.sub--text {
+  font-family: 'Oxygen', sans-serif;
+}
+
+.answer--options {
+  display: flex;
+}
+
+.answer--button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+}
+
+.answer--button:hover {
+  color: #8a5bf2; /* Light purple text on hover */
+}
+
+.answer--button.selected {
+  color: #8a5bf2; /* Purple text for selected answer */
+  border: 2px solid #8a5bf2; /* Purple border for selected answer */
+  border-radius: 50%; /* Rounded border for selected answer */
+}
