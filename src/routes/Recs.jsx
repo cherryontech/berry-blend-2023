@@ -5,7 +5,21 @@ import AllResources from '../components/buttons/ExploreResources';
 import ThumbsUp from '../components/buttons/ThumbsUp';
 import ThumbsDown from '../components/buttons/ThumbsDown';
 
+// function App() {
+//   const [showButton, setShowButton] = useState(true);
+
+//   const toggleButton = () => {
+//     setShowButton(!showButton);
+//   };
+
+//   return <div>{showButton && <button onClick={toggleButton}>Hide Button</button>}</div>;
+// }
+
 export default function Recommendations() {
+  const [showButton, setShowButton] = useState(true);
+  const toggleButton = () => {
+    setShowButton(!showButton);
+  };
   return (
     <div>
       <header className="rec--header">
