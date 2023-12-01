@@ -18,7 +18,7 @@ const QuestionBank = ({ index, question, onAnswer }) => {
             <button
               key={value}
               onClick={() => handleButtonClick(value)}
-              className={`answer-button ${selectedValue === value ? 'selected' : ''}`}
+              className={`answer--button ${selectedValue === value ? 'selected' : ''}`}
             >
               {value}
             </button>

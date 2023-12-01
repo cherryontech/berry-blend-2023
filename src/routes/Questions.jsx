@@ -22,7 +22,11 @@ const Questions = () => {
   return (
     <div className="questions--container">
       <div className="main--text">
-        <h1>Burnout Questions</h1>
+        <h1>Heading (Need Copy)</h1>
+        <h2>
+          On a scale of 1 to 5, with 1 being strongly disagree and 5 being strongly agree, please rate the following
+          statements:
+        </h2>
         <QuestionBank
           index={0}
           question="I often feel exhausted and drained from work or daily responsibilities."
