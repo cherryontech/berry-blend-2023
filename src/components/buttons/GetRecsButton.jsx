@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../Questions.css';
 
 const GetRecsButton = () => (
   <div className="recs--button">
