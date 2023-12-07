@@ -1,10 +1,11 @@
 import React from 'react';
 import ActivityRec from '../components/ActivityRec';
 import '../Recs.css';
-import AllResources from '../components/buttons/ExploreResources';
-import ThumbsUp from '../components/buttons/ThumbsUp';
-import ThumbsDown from '../components/buttons/ThumbsDown';
-import { useState } from 'react';
+import AllResourcesButton from '../components/buttons/AllResourcesButton';
+import React, { useState, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function Recommendations({ finalScore, finalSummary }) {
   const [showButton, setShowButton] = useState(false);
