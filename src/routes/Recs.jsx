@@ -4,27 +4,25 @@ import '../Recs.css';
 import AllResources from '../components/buttons/ExploreResources';
 import ThumbsUp from '../components/buttons/ThumbsUp';
 import ThumbsDown from '../components/buttons/ThumbsDown';
+import { useState } from 'react';
 
-// function App() {
-//   const [showButton, setShowButton] = useState(true);
+export default function Recommendations({ finalScore, finalSummary }) {
+  const [showButton, setShowButton] = useState(false);
+  const ref = useRef(null);
 
-//   const toggleButton = () => {
-//     setShowButton(!showButton);
-//   };
-
-//   return <div>{showButton && <button onClick={toggleButton}>Hide Button</button>}</div>;
-// }
-
-export default function Recommendations() {
-  const [showButton, setShowButton] = useState(true);
-  const toggleButton = () => {
-    setShowButton(!showButton);
+  const thumbsDown = () => {
+    setShowButton(true);
+    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
+  const thumbsUp = () => {
+    setShowButton(false);
+  };
+
   return (
-    <div>
+    <div ref={ref}>
       <header className="rec--header">
-        <h1>Your Score </h1>
-        <p>Based on your score you may be experiencing... Here are your recommended activities.</p>
+        <h1>Your Score: {finalScore} </h1>
+        <p>Based on your score you may be experiencing {finalSummary} Here are your recommended activities.</p>
       </header>
       <section>
         <ActivityRec
@@ -52,11 +50,15 @@ export default function Recommendations() {
       <section className="feedback--container">
         <h2 className="feedback--header">Let us know what you thought of our recommendations</h2>
         <p className="feedback--blurb">We welcome your feedback, so that we can continually improve this experience.</p>
-        <div className="thumbs--container">
-          <ThumbsUp />
-          <ThumbsDown />
-        </div>
-        <AllResources className="explore--recs--button" />
+        <section className="thumbs--container">
+          <button className="thumbs--up" onClick={thumbsUp}>
+            <FontAwesomeIcon icon={faThumbsUp} size="3x" />
+          </button>
+          <button className="thumbs--down" onClick={thumbsDown}>
+            <FontAwesomeIcon icon={faThumbsDown} size="3x" />
+          </button>
+        </section>
+        {showButton && <AllResourcesButton className="explore--recs--button" />}
       </section>
     </div>
   );

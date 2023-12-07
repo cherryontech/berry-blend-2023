@@ -3,7 +3,7 @@ import '../Questions.css';
 import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 
-const Questions = () => {
+const Questions = ({ onFinalScore, onFinalSummary }) => {
   const [points, setPoints] = useState(Array(5).fill(0));
 
   const handleAnswer = (questionIndex, pointsValue) => {
@@ -16,8 +16,23 @@ const Questions = () => {
       setPoints(newPoints);
     }
   };
-
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
+  const sumOfPoints = (totalPoints) => {
+    if (totalPoints >= 5 && totalPoints <= 10) {
+      console.log('Low Burnout');
+    } else if (totalPoints >= 11 && totalPoints <= 20) {
+      console.log('Moderate Burnout');
+    } else if (totalPoints >= 21 && totalPoints <= 25) {
+      console.log('High Burnout');
+    }
+  };
+  // sumOfPoints(totalPoints);
+
+  // const [questionsSummary, setQuestionsSummary] = useState('');
+  // const pointsSummary = () => {
+  //   setQuestionsSummary(sumOfPoints);
+  //   console.log(questionsSummary);
+  // };
 
   return (
     <div className="questions--container">
@@ -49,8 +64,8 @@ const Questions = () => {
         />
         <QuestionBank index={4} question="I often neglect self-care and leisure activities." onAnswer={handleAnswer} />
         <p>Total Score: {totalPoints}</p>
-
-        <GetRecsButton />
+        {/* get recs button, on click, show console.log sumOfPoints */}
+        <GetRecsButton onClick={sumOfPoints} />
       </div>
     </div>
   );
