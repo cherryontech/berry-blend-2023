@@ -1,4 +1,4 @@
-export const recommendationData = [
+export default [
   {
     type: 'Exercise',
     activity: 'Walking (alone)',

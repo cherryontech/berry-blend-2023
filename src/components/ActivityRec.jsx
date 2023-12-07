@@ -10,7 +10,7 @@ export default function ActivityRec(props) {
         </div>
         <div className="activity-info-container">
           <h3 className="activity--title">{props.activity}</h3>
-          <p className="activity--description">{props.activityDesc}</p>
+          <p className="activity--description">{props.description}</p>
           <h5 className="activity--duration">Duration: {props.duration}</h5>
           <h5 className="activity--equipment">Equipment Needed: {props.equipment} </h5>
           <AddToCalendar />

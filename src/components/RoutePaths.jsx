@@ -4,7 +4,7 @@ import ErrorPage from '../routes/ErrorPage';
 import Resources from '../routes/Resources';
 import Questions from '../routes/Questions';
 import Recs from '../routes/Recs';
-import { Test } from '../routes/Test';
+// import { Test } from '../routes/Test';
 import { useState } from 'react';
 
 const RoutePaths = () => {
@@ -26,7 +26,7 @@ const RoutePaths = () => {
         <Route path="/Questions" element={<Questions onFinalScore={handleScore} onFinalSummary={handleSummary} />} />
         <Route path="/Recs" element={<Recs FinalScore={handleScore} FinalSummary={handleSummary} />} />
         {/* TODO delete Test file when it is no longer needed */}
-        <Route path="/Test" element={<Test />} />
+        {/* <Route path="/Test" element={<Test />} /> */}
         {/* TODO need to figure out why error page route is not working */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
