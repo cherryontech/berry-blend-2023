@@ -5,8 +5,9 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import ActivityRec from '../components/ActivityRec';
 import '../Recs.css';
 import AllResourcesButton from '../components/buttons/AllResourcesButton';
+import recommendations from '../static/recommendationData';
 
-export default function Recommendations() {
+export default function Recommendations({ finalScore, finalSummary }) {
   const [showButton, setShowButton] = useState(false);
   const ref = useRef(null);
 
@@ -18,37 +19,45 @@ export default function Recommendations() {
     setShowButton(false);
   };
 
-  console.log(showButton);
+  /// TO
+  // filter out high/md/low
+  // sort/randomize
+  // slice to reduce to 3
+  // map
+
+  // const array = [1, 2, 3, 4, 5, 6];
+  // const filteredData = array.filter((n) => n <= 5);
+  // const randomized = filteredData.sort(() => Math.random() - 0.5);
+  // const slicedData = randomized.slice(2);
+  // const mapped = slicedData.map((n) => n + 1);
+
+  // const crazyArray = [1, 2, 3, 4, 5, 6]
+  //   .filter((n) => n <= 5)
+  //   .sort(() => Math.random() - 0.5)
+  //   .slice(2)
+  //   .map((n) => n + 1);
+
+  // console.log(filteredData, randomized, slicedData, mapped, crazyArray);
+
+  const suggestedRecs = recommendations.map((recommended) => {
+    return (
+      <ActivityRec
+        image={recommended.photoUrl}
+        activity={recommended.activity}
+        description={recommended.blurb}
+        duration={recommended.durationInMinutes}
+        equipment={recommended.needsEquipment}
+      />
+    );
+  });
 
   return (
     <div ref={ref}>
       <header className="rec--header">
-        <h1>Your Score </h1>
-        <p>Based on your score you may be experiencing... Here are your recommended activities.</p>
+        <h1>Your Score: {finalScore} </h1>
+        <p>Based on your score you may be experiencing {finalSummary}. Here are your recommended activities.</p>
       </header>
-      <section>
-        <ActivityRec
-          image="src/assets/walkingActivity.jpeg"
-          activity="Walking"
-          activityDesc="Take a moment to step outside and breathe the fresh air. Walking by yourself is a great opportunity to be mindful of the moment and disconnect from work."
-          duration="30 minutes"
-          equipment="none needed"
-        />
-        <ActivityRec
-          image="src/assets/yogaActivity.jpeg"
-          activity="Yoga Class"
-          activityDesc="Sign up for a Yoga class in your community. It provides an opportunity to be in community with others and to focus on your health. "
-          duration="1 hour"
-          equipment="none needed"
-        />
-        <ActivityRec
-          image="src/assets/journaling.jpeg"
-          activity="Journaling"
-          activityDesc="Find a comfortable spot to write and dump all of your thoughts and feelings on a piece of paper."
-          duration="30 minutes"
-          equipment="none needed"
-        />
-      </section>
+      <section>{suggestedRecs}</section>
       <section className="feedback--container">
         <h2 className="feedback--header">Let us know what you thought of our recommendations</h2>
         <p className="feedback--blurb">We welcome your feedback, so that we can continually improve this experience.</p>
@@ -64,4 +73,26 @@ export default function Recommendations() {
       </section>
     </div>
   );
+
+  // <ActivityRec
+  //         image="src/assets/walkingActivity.jpeg"
+  //         activity="Walking"
+  //         activityDesc="Take a moment to step outside and breathe the fresh air. Walking by yourself is a great opportunity to be mindful of the moment and disconnect from work."
+  //         duration="30 minutes"
+  //         equipment="none needed"
+  //       />
+  //       <ActivityRec
+  //         image="src/assets/yogaActivity.jpeg"
+  //         activity="Yoga Class"
+  //         activityDesc="Sign up for a Yoga class in your community. It provides an opportunity to be in community with others and to focus on your health. "
+  //         duration="1 hour"
+  //         equipment="none needed"
+  //       />
+  //       <ActivityRec
+  //         image="src/assets/journaling.jpeg"
+  //         activity="Journaling"
+  //         activityDesc="Find a comfortable spot to write and dump all of your thoughts and feelings on a piece of paper."
+  //         duration="30 minutes"
+  //         equipment="none needed"
+  //       />
 }

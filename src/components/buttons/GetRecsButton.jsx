@@ -1,12 +1,24 @@
 import React from 'react';
 import '../../Questions.css';
+import { useNavigate } from 'react-router-dom';
 
-const GetRecsButton = () => (
-  <div className="recs--button">
-    <button className="recs--button" onClick={(event) => (window.location.href = '/Recs')}>
-      Get Recommendations
-    </button>
-  </div>
-);
+const GetRecsButton = ({ onClickRecButton }) => {
+  const navigate = useNavigate();
+
+  const navigateToRecommendations = () => {
+    // 👇️ navigate to /recommendation page
+    navigate('/Recs');
+  };
+  const handleClick = () => {
+    // navigateToRecommendations();
+  };
+  return (
+    <div className="recs--button">
+      <button className="recs--button" onClick={onClickRecButton}>
+        Get Recommendations
+      </button>
+    </div>
+  );
+};
 
 export default GetRecsButton;

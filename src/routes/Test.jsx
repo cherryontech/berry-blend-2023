@@ -1,10 +1,10 @@
 import React from 'react';
-import { recommendationData } from '../static/recommendationData';
+import recommendations from '../static/recommendationData';
 
 import '../Test.css';
 
 export const Test = () => {
-  const listedItems = recommendationData.map((item) => (
+  const listedItems = recommendations.map((item) => (
     <>
       <p>{item.activity}</p>
     </>
