@@ -9,12 +9,15 @@ const GetRecsButton = ({ onClickRecButton }) => {
     // 👇️ navigate to /recommendation page
     navigate('/Recs');
   };
-  const handleClick = () => {
-    // navigateToRecommendations();
+  const handleRecButton = () => {
+    navigateToRecommendations();
+    {
+      onClickRecButton;
+    }
   };
   return (
     <div className="recs--button">
-      <button className="recs--button" onClick={onClickRecButton}>
+      <button className="recs--button" onClick={handleRecButton}>
         Get Recommendations
       </button>
     </div>

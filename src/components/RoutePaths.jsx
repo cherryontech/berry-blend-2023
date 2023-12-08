@@ -26,7 +26,7 @@ const RoutePaths = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Questions" element={<Questions onFinalScore={handleScore} onFinalSummary={handleSummary} />} />
-        <Route path="/Recs" element={<Recs finalScore={finalScore} finalSummary={handleSummary} />} />
+        <Route path="/Recs" element={<Recs finalScore={finalScore} finalSummary={finalSummary} />} />
         {/* TODO delete Test file when it is no longer needed */}
         <Route path="/Test" element={<Test />} />
         {/* Error paths, keep last */}

@@ -5,13 +5,29 @@ import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 
 export const sumOfPoints = (totalPoints) => {
   if (totalPoints >= 5 && totalPoints <= 10) {
-    console.log('Low Burnout');
+    // console.log('Low Burnout');
+    return 'Low Burnout';
   } else if (totalPoints >= 11 && totalPoints <= 20) {
     console.log('Moderate Burnout');
+    // return 'Moderate Burnout';
   } else if (totalPoints >= 21 && totalPoints <= 25) {
     console.log('High Burnout');
+    // return 'High Burnout';
   }
 };
+
+const burnoutLevel = (pointsSummary) => {
+  if (pointsSummary === 'Low Burnout') {
+    return "You're vibing in the low burnout zone. Life is a chill playlist, and stress is just a background beat. Keep riding those good vibes!";
+  } else if (pointsSummary == 'Moderate Burnout') {
+    return "You're cruising in the moderate burnout lane. Life's got some bumps, but you're handling it like a pro. Time to sprinkle in some self-love, rest a little bit and recharge.";
+  } else if (pointsSummary === 'High Burnout') {
+    return "Uh-oh, you're in the high burnout zone! Your chill has gone missing, and stress is throwing a wild party. Time to hit pause, find your zen, and reclaim your cool. Burnout ain't got nothing on you!";
+  }
+};
+
+burnoutLevel(sumOfPoints);
+
 const Questions = ({ onFinalScore, onFinalSummary }) => {
   const [points, setPoints] = useState(Array(5).fill(0));
 
@@ -30,6 +46,7 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
   const handleClickRecButton = () => {
     sumOfPoints(totalPoints);
     onFinalScore(totalPoints);
+    onFinalSummary(burnoutLevel);
     // push to new page with RR
   };
   return (

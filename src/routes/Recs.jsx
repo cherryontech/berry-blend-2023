@@ -39,6 +39,9 @@ export default function Recommendations({ finalScore, finalSummary }) {
 
   // console.log(filteredData, randomized, slicedData, mapped, crazyArray);
 
+  const lowEnergyRecs = recommendations.filter((recs) => recs.recommendationData.energyRequired);
+  console.log(lowEnergyRecs);
+
   const suggestedRecs = recommendations.map((recommended) => {
     return (
       <ActivityRec
@@ -55,7 +58,7 @@ export default function Recommendations({ finalScore, finalSummary }) {
     <div ref={ref}>
       <header className="rec--header">
         <h1>Your Score: {finalScore} </h1>
-        <p>Based on your score you may be experiencing {finalSummary}. Here are your recommended activities.</p>
+        <p> {finalSummary}</p>
       </header>
       <section>{suggestedRecs}</section>
       <section className="feedback--container">
