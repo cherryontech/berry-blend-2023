@@ -1,4 +1,4 @@
-export default [
+const RecsData = [
   {
     type: 'Exercise',
     activity: 'Walking (alone)',
@@ -543,3 +543,5 @@ export default [
     locations: ['outside', 'indoors'],
   },
 ];
+
+export default RecsData;

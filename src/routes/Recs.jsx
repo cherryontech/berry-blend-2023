@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +18,7 @@ export default function Recommendations({ finalScore, finalSummary }) {
   const thumbsUp = () => {
     setShowButton(false);
   };
+  console.log(finalSummary);
 
   /// TO
   // filter out high/md/low
@@ -39,34 +40,26 @@ export default function Recommendations({ finalScore, finalSummary }) {
 
   // console.log(filteredData, randomized, slicedData, mapped, crazyArray);
 
-  const lowEnergyRecs = RecsData
-    // .filter((recs) => recs.energyRequired == 'low')
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 3)
-    .map((recs) => {
-      return (
-        <ActivityRec
-          image={recs.photoUrl}
-          activity={recs.activity}
-          description={recs.blurb}
-          duration={recs.durationInMinutes}
-          equipment={recs.needsEquipment}
-        />
-      );
-    });
+  const lowEnergyRecs = useMemo(
+    () =>
+      RecsData
+        // .filter((recs) => recs.energyRequired == 'low')
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3)
+        .map((recs) => {
+          return (
+            <ActivityRec
+              image={recs.photoUrl}
+              activity={recs.activity}
+              description={recs.blurb}
+              duration={recs.durationInMinutes}
+              equipment={recs.needsEquipment}
+            />
+          );
+        }),
+    [RecsData],
+  );
   console.log(lowEnergyRecs);
-
-  // const suggestedRecs = recommendations.map((recommended) => {
-  //   return (
-  //     <ActivityRec
-  //       image={recommended.photoUrl}
-  //       activity={recommended.activity}
-  //       description={recommended.blurb}
-  //       duration={recommended.durationInMinutes}
-  //       equipment={recommended.needsEquipment}
-  //     />
-  //   );
-  // });
 
   return (
     <div ref={ref}>
