@@ -2,7 +2,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Walking (alone)',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Take a moment to step outside and breathe the fresh air. Walking by yourself is a great opportunity to be mindful of the moment and disconnect from work.',
     photoUrl: 'https://t3.ftcdn.net/jpg/00/71/20/64/240_F_71206480_bKqSHJIS7vul3QGskebZpkbxMUXXktvB.jpg',
@@ -13,7 +13,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Walking (with friends)',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       "Walking with someone allows for you to vent and/or discuss life beyond the workplace. It's a great way to be held accountable for focusing on an activity beyond work.",
     photoUrl: 'https://t4.ftcdn.net/jpg/01/96/71/85/240_F_196718562_FBiL5BeGLWCP7k2Nk3EBTueLQb2QmF2r.jpg',
@@ -24,7 +24,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Going for a hike (alone)',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Going for a hike allows you to focus on the beauty of nature and physically pulls you away from the workspace. Take a moment to take in the surrondings and unplug.',
     photoUrl: 'https://t4.ftcdn.net/jpg/01/17/78/93/240_F_117789390_cIozPXykkpHAQzYSBKZlxr1fjo2JckL5.jpg',
@@ -35,7 +35,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Going for a hike (with people)',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Make plans to enjoy nature with a friend or more. Accountability is important and nature is a great way to boost endorphins.',
     photoUrl: 'https://t3.ftcdn.net/jpg/02/79/12/64/240_F_279126480_SnYLQ4giezvQntosGqijPxvwIcaHLQAe.jpg',
@@ -46,7 +46,7 @@ export default [
   {
     type: 'Exercise',
     activity: '7 Quick Stretches',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Bodies internalize stress so taking 15 minutes to do some quick strecthing allows the body to relax.',
     photoUrl: 'https://t4.ftcdn.net/jpg/00/58/75/21/240_F_58752109_bp4eHDcc1FOnleo4GZnibGSwxV42FWvg.jpg',
     durationInMinutes: 15,
@@ -56,7 +56,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Yoga class',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Sign up for a Yoga class in your community. It provides an opportunity to be in community with others and to focus on your health.',
     photoUrl: 'https://t4.ftcdn.net/jpg/01/92/32/97/240_F_192329714_GdPncdREZR8amY642VAyp3y7yw8nQ38X.jpg',
@@ -67,7 +67,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Yin yoga class',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       "Sign up for a Yin Yoga class in your community. It's a slow paced yoga that focuses on incorporating principles of traditional Chinese medicine. It's a great opportunity to slow your lifestyle down a bit.",
     photoUrl: 'https://t3.ftcdn.net/jpg/04/34/52/18/240_F_434521882_gbuvQkTXXQtaej7aVpA2sSVZRaHwWrz2.jpg',
@@ -78,7 +78,7 @@ export default [
   {
     type: 'Exercise',
     activity: '10 minute boxing workout',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: "Take this at home boxing class to destress. You'll be sweating off some stress by the end.",
     photoUrl: 'https://t4.ftcdn.net/jpg/01/73/80/59/240_F_173805905_ZYk2hLdeeGOVX1JNLQ1Oliu0BeSRHnph.jpg',
     durationInMinutes: 11,
@@ -88,7 +88,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Swimming',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Swimming is a low-impact for the body and a great opportunity to be in the present.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/43/77/72/240_F_143777213_rygDL4sjci25AbaufYjkMfsf4jAaAmar.jpg',
     durationInMinutes: 45,
@@ -98,7 +98,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Rock climbing',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb: 'Rock climbing is great mindful activity. It forces you to focus on this one activity.',
     photoUrl: 'https://t4.ftcdn.net/jpg/02/08/63/41/240_F_208634122_MYNwKpvVImq6dlmijZPQFLSNkJ39Yq9k.jpg',
     durationInMinutes: 60,
@@ -108,7 +108,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Journaling',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Find a comfortable spot to write and dump all of your thoughts and feelings on a piece of paper.',
     photoUrl: 'https://t4.ftcdn.net/jpg/04/34/47/51/240_F_434475192_x7EtDzAaIDCc4OIBElsm68zG2Os9uEXh.jpg',
     durationInMinutes: 30,
@@ -118,7 +118,7 @@ export default [
   {
     type: 'Community',
     activity: 'Coffee with friends',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Spending time with people you cherish is a great way to focus on things that make you happy. Sip on a coffee or a tea and catch up on what is going on in their lives.',
     photoUrl: 'https://t4.ftcdn.net/jpg/02/24/61/95/240_F_224619525_O7QMxIYQoUZCOz6H0Hu7Hu0Rr5oqKpBZ.jpg',
@@ -129,7 +129,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Listening to a podcast',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Choose a podcast you enjoy and listen to one episode. Try to only listen to the episode instead of multi-tasking.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/82/03/34/240_F_182033486_hh0ET65iHYUmO4kuyjURmo3uk8fmPnww.jpg',
@@ -140,7 +140,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Reading a book you enjoy',
-    needsEquipment: true,
+    needsEquipment: 'No',
     blurb: 'Rent or buy a book you like. Allow yourself some time to read the book and bring the world to life.',
     photoUrl: 'https://t4.ftcdn.net/jpg/01/70/71/13/240_F_170711338_fpTM1fCGeUqsmrgdhNyF6kKRkw7Eafq5.jpg',
     durationInMinutes: 30,
@@ -150,7 +150,7 @@ export default [
   {
     type: 'Meditation',
     activity: '20 minute nap',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'A 20 minute nap allows you to get rest without entering a deep sleep state.',
     photoUrl: 'https://t4.ftcdn.net/jpg/05/39/40/47/240_F_539404746_MIJqnaIe2vPub5dSc3ku68Vx3adtKVH8.jpg',
     durationInMinutes: 20,
@@ -160,7 +160,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Learn to rollerskate',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       'Shift from focusing to balancing your work life to balancing yourself on rollerskates. This activity will take all your focus and require you to be present.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/86/97/96/240_F_186979644_xCwmTlmuEf9w0wFHXslQINl8dG9Iyimm.jpg',
@@ -171,7 +171,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Solo road trip',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       'Drive to an exciting spot, new or old, while listening to music or a podcast. Allow yourself time to explore what is outside your workspace. ',
     photoUrl: 'https://t3.ftcdn.net/jpg/06/27/19/32/240_F_627193204_8CJtDFoIal4PcScWRylJoemvqT0mPVLE.jpg',
@@ -182,7 +182,7 @@ export default [
   {
     type: 'Community',
     activity: 'Mini trip with loved one(s)',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       "A road trip doesn't always need to be far. Plan a getaway with your love one(s) and spend time enjoying each others company.",
     photoUrl: 'https://t3.ftcdn.net/jpg/03/34/44/36/240_F_334443623_5rStK7pRj8vVaYtNHOyga1tkheffu3wq.jpg',
@@ -193,7 +193,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Cleaning (as a meditative act of self care)',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb: 'Having a clean space can declutter your mind. Focus on one area of your home to tidy up.',
     photoUrl: 'https://t4.ftcdn.net/jpg/05/59/70/85/240_F_559708551_TcmnvpmBQvJiyvCEUDrFsFcc0LPmcpEF.jpg',
     durationInMinutes: 30,
@@ -203,7 +203,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Drinking Tea',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Choose a tea that will grant you some respite in your busy time. You deserve time to unplug and unwind while enjoying a refreshing drink.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/43/75/20/240_F_143752063_X4fVbW0gKMpoh9K8XxJRV01l3Pmh5WtS.jpg',
@@ -214,7 +214,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Eating a meal that makes me happy',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Eat a meal that fills your heart with warmth. Treat yourself to a piece of home.',
     photoUrl: 'https://t3.ftcdn.net/jpg/05/38/01/06/240_F_538010616_YkFXUHg8xXszhn1dp9Dvo82rxAYtOlrz.jpg',
     durationInMinutes: 30,
@@ -224,7 +224,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Choosing snacks that make me happy',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Choose snacks that bring you joy and peace. Allowing yourself to induldge will release endorphins.',
     photoUrl: 'https://t3.ftcdn.net/jpg/02/57/39/98/240_F_257399801_qNfq0Hehg05A2QCHWGW2OfIvrjzUpDKV.jpg',
     durationInMinutes: 30,
@@ -234,7 +234,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Cook and eat dinner',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Choose a meal that you can cook within 30 minutes and spend the other 30 minutes eating. Energize your body and mind by providing yourself a nutritious meal.',
     photoUrl: 'https://t4.ftcdn.net/jpg/02/14/93/65/240_F_214936559_1sE0noG5VybdvHYN2OeXRZTmIgHwt4El.jpg',
@@ -245,7 +245,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Taking my medication properly every day',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       "Taking care of our body and mind means allowing ourselves time to take the medication we need. You'll feel better in the long term",
     photoUrl: 'https://t4.ftcdn.net/jpg/03/00/25/21/240_F_300252142_TcKN9fnctlKW5hVWzAOvmAUbzv48qsc9.jpg',
@@ -256,7 +256,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Researching, learning about different cultures foods, then trying to make those dishes',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       "Learn about a culture's food by cooking a dish. This activity will require you to focus on the task at hand while getting to enjoy your hard work at the end.",
     photoUrl: 'https://t4.ftcdn.net/jpg/05/22/18/69/240_F_522186924_7bI8e5bXB1v7kj7EIBmwQifydzj3nc8x.jpg',
@@ -267,7 +267,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Lighting candles',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       'Light a candle or two to allow a wonderful scent to fill your area. Allow your mind to relax with the new setting.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/83/73/66/240_F_183736638_l6hmqA4GcygQOrnppc0lOIvwb0D4UvQ6.jpg',
@@ -278,7 +278,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Making cute lunchboxes for work',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Show yourself love and appreciation by not only making a yummy lunch for work but a cute one! Beautiful things in life make us appreciate it more!',
     photoUrl: 'https://t4.ftcdn.net/jpg/05/90/64/97/240_F_590649712_MtoqG83WRoCUMgSUd7P2xC2OfYWWSeio.jpg',
@@ -289,7 +289,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Painting my nails',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       'Choose your favorite color and/or design and paint your nails. The repetiive motion of it will allow you to focus on the task at hand and seeing your nails later will boost your confidence.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/21/03/22/240_F_121032246_LUucjNSWchtUcFfrksmpMp7bI9QjmwPx.jpg',
@@ -300,7 +300,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Doing a face mask',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb: "Put a face mask on to melt away the day's stress.",
     photoUrl: 'https://t3.ftcdn.net/jpg/01/40/13/40/240_F_140134000_XGQoZSMNvXdDkL6r7ZRCmmadAp2H13CO.jpg',
     durationInMinutes: 30,
@@ -310,7 +310,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Moisturising my body',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Everytime you get out of the shower, mosturise your body to show yourself some love and appreciation. ',
     photoUrl: 'https://t4.ftcdn.net/jpg/05/91/54/01/240_F_591540172_vF2T7TrQHCkji4i5m7MnxJi9xQKmu25P.jpg',
     durationInMinutes: 15,
@@ -320,7 +320,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Creative writing',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Write a short story that allows you to unplug from reality.  ',
     photoUrl: 'https://t4.ftcdn.net/jpg/02/96/19/17/240_F_296191739_A1xNTvGJ5LdfLgcjEO6AAK8t7sEgDiDE.jpg',
     durationInMinutes: 30,
@@ -330,7 +330,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Cross stitching',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       'Engaging in art allows our body to focus on the task at hand and recognize that we are more than our work. Take some time to learn something new and create something beautiful.',
     photoUrl: 'https://t3.ftcdn.net/jpg/02/07/99/76/240_F_207997627_0jv8atTKk3eNahyC5ExhT8mrHgHYTYLJ.jpg',
@@ -341,7 +341,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Foam rolling parts of my body',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb: 'Our bodies absorb stress. Give yourself an opportunity to melt the stress away through foam rolling,',
     photoUrl: 'https://t4.ftcdn.net/jpg/02/59/70/99/240_F_259709983_xtq8LN4gpXcD2hzVIhdwdmHsm1pHyy9m.jpg',
     durationInMinutes: 15,
@@ -351,7 +351,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Get a massage',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Ask a loved one or book a massage to melt the stress away. You deserve to be treated.',
     photoUrl: 'https://t4.ftcdn.net/jpg/01/29/18/49/240_F_129184958_888q2jBjRjCIkhKKbBmeyfDkpt9HXsmW.jpg',
     durationInMinutes: 30,
@@ -361,7 +361,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Write down 10 things you are grateful for',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Focusing on things we are grateful for allow us to recognize the positive occuring in our life.',
     photoUrl: 'https://t3.ftcdn.net/jpg/04/32/43/64/240_F_432436428_8Z9xjuUvSMezfWiOJ1xCz1oOvVF2pXnn.jpg',
     durationInMinutes: 15,
@@ -371,7 +371,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Dancing to music',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Choose a playlist you love and dance it out! Allow your body to move whicever way it desires. .',
     photoUrl: 'https://t3.ftcdn.net/jpg/06/26/92/34/240_F_626923425_FdX4DBQkR4wPO8zKMQS3XwFU8DP6rFbj.jpg',
     durationInMinutes: 15,
@@ -381,7 +381,7 @@ export default [
   {
     type: 'Community',
     activity: 'Go to a free activity i.e museum or art gallery',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       "Visting a museum or art gallery allows us to interact with the world beyond our space. It's a wonderful opportunity to gain perspective and feel joy.",
     photoUrl: 'https://t4.ftcdn.net/jpg/03/68/96/99/240_F_368969904_Amn53fn5Ha3GVft73wmrLR3jdQXjVGJV.jpg',
@@ -392,7 +392,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Laying in the sun (or shade on a sunny day)',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Soak in the sun to release serotonin and breathe in fresh air. You might even want to read a book, listen to music, or just be present.',
     photoUrl: 'https://t3.ftcdn.net/jpg/05/80/58/36/240_F_580583668_teDP8cgbsB16pT87HT0EfO4VAvCC7Atx.jpg',
@@ -403,7 +403,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Crocheting or Knitting',
-    needsEquipment: true,
+    needsEquipment: 'Yes',
     blurb:
       'The repetitive motion of crocheting or knitting grants you an opportunity to focus on the task at hand and not focus on other concerns.',
     photoUrl: 'https://t4.ftcdn.net/jpg/00/92/10/87/240_F_92108780_XA98PsCYjODnoBrPXQtE1iujCSLti2Z5.jpg',
@@ -414,7 +414,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Taking myself out for a meal',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Experience a wonderful meal by yourself or loved one(s) by going out to eat. It encourages you to get out of your routine and add endorphines.',
     photoUrl: 'https://t3.ftcdn.net/jpg/01/73/97/96/240_F_173979619_yBsdIUqP8zRjmeglakBSZ24dzfnIf4rT.jpg',
@@ -425,7 +425,7 @@ export default [
   {
     type: 'Community',
     activity: 'Go to a flea market',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Be in company of others by attending a flea market. Enjoy yourself by exploring trinkets, food, and interacting with others.',
     photoUrl: 'https://t4.ftcdn.net/jpg/02/10/88/87/240_F_210888764_sag40DHyjrYrZjtxIx8ixYv04hj0bjNK.jpg',
@@ -436,7 +436,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Daily Calm | 10 Minute Mindfulness Meditation | Be Present - YouTube',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Meditation allows us to take a moment and slow down. Complete this 10 minute meditation to be fully present in the moment.',
     photoUrl: 'https://www.youtube.com/watch?v=ZToicYcHIOU',
@@ -447,7 +447,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Guided Meditation for OCD/Anxiety - Detachment from Intrusive Thoughts - YouTube',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       "Intrusive thoughts can run rampant when we are stressed. Provide yourself a break to detach yourself from thoughts that just won't go away.",
     photoUrl: 'https://www.youtube.com/watch?v=phm_VPjijh8',
@@ -458,7 +458,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Guided Meditation for Self Love 💗 - YouTube',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Self love is one of the most important things we can do. Focus on how you love and appreciate yourself for all the amazing and hard work you have done and are doing.',
     photoUrl: 'https://www.youtube.com/watch?v=P-8ALcF8AGE&t=20s',
@@ -469,7 +469,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'January 4th 30 Minute Sweat Session | Booty Army 30 & Elite',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Dance for 30 minutes to get your mind off things. The Booty Army is a fun and upbeat way to exercise and focus on the dance moves.',
     photoUrl: 'https://www.youtube.com/watch?v=pXxyek7BSdM',
@@ -480,7 +480,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Yoga For Sick Recovery - YouTube',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       "If you're feeling low-energy, take some time to focus on yoga for recovery. Grant yourself some grace and love by honoring your energy level.",
     photoUrl: 'https://www.youtube.com/watch?v=hDFHCHRcd1I',
@@ -491,7 +491,7 @@ export default [
   {
     type: 'Exercise',
     activity: 'Yoga For When You Are Feeling Unmotivated | 20-Minute Home Yoga - YouTube',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb: 'Allow yourself to start slow and get energy in your body by completing this yoga routine. ',
     photoUrl: 'https://www.youtube.com/watch?v=C1pm0g2mSlE',
     durationInMinutes: 23,
@@ -501,7 +501,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'DBT Podcast',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'This Dialetical Behavior Therapy podcast focuses on skills that will benefit you long-term. Choose a skill that will benefit you the most.',
     photoUrl: 'https://theskillfullpodcast.libsyn.com/2019',
@@ -512,7 +512,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Watch your favorite TV show',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Unplug from reality by watching your favorite TV show. Grant yourself some time on the couch or bed to focus on what you enjoy watching.',
     photoUrl: 'https://t4.ftcdn.net/jpg/04/33/09/25/240_F_433092533_6yA8KufgoMuiRoSxYLmL9KXfD1klO8CL.jpg',
@@ -523,7 +523,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Affirmations to help with burnout',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'Choose an affirmation, or more, to repeat to yourself three times daily. Your mind will thank you for giving yourself grace.',
     photoUrl: 'https://www.atlassian.com/blog/productivity/daily-affirmations-to-help-with-burnout',
@@ -534,7 +534,7 @@ export default [
   {
     type: 'Meditation',
     activity: 'Mindful eating',
-    needsEquipment: false,
+    needsEquipment: 'No',
     blurb:
       'So many times we rush our meals to get back to work. Instread, eat a meal and focus on the taste and texture. Focus on only the task of eating.',
     photoUrl: 'https://www.hsph.harvard.edu/nutritionsource/mindful-eating/',

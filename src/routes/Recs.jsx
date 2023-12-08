@@ -5,7 +5,7 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import ActivityRec from '../components/ActivityRec';
 import '../Recs.css';
 import AllResourcesButton from '../components/buttons/AllResourcesButton';
-import recommendations from '../static/recommendationData';
+import RecsData from '../static/recommendationData';
 
 export default function Recommendations({ finalScore, finalSummary }) {
   const [showButton, setShowButton] = useState(false);
@@ -39,20 +39,34 @@ export default function Recommendations({ finalScore, finalSummary }) {
 
   // console.log(filteredData, randomized, slicedData, mapped, crazyArray);
 
-  const lowEnergyRecs = recommendations.filter((recs) => recs.recommendationData.energyRequired);
+  const lowEnergyRecs = RecsData
+    // .filter((recs) => recs.energyRequired == 'low')
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3)
+    .map((recs) => {
+      return (
+        <ActivityRec
+          image={recs.photoUrl}
+          activity={recs.activity}
+          description={recs.blurb}
+          duration={recs.durationInMinutes}
+          equipment={recs.needsEquipment}
+        />
+      );
+    });
   console.log(lowEnergyRecs);
 
-  const suggestedRecs = recommendations.map((recommended) => {
-    return (
-      <ActivityRec
-        image={recommended.photoUrl}
-        activity={recommended.activity}
-        description={recommended.blurb}
-        duration={recommended.durationInMinutes}
-        equipment={recommended.needsEquipment}
-      />
-    );
-  });
+  // const suggestedRecs = recommendations.map((recommended) => {
+  //   return (
+  //     <ActivityRec
+  //       image={recommended.photoUrl}
+  //       activity={recommended.activity}
+  //       description={recommended.blurb}
+  //       duration={recommended.durationInMinutes}
+  //       equipment={recommended.needsEquipment}
+  //     />
+  //   );
+  // });
 
   return (
     <div ref={ref}>
@@ -60,7 +74,7 @@ export default function Recommendations({ finalScore, finalSummary }) {
         <h1>Your Score: {finalScore} </h1>
         <p> {finalSummary}</p>
       </header>
-      <section>{suggestedRecs}</section>
+      <section>{lowEnergyRecs}</section>
       <section className="feedback--container">
         <h2 className="feedback--header">Let us know what you thought of our recommendations</h2>
         <p className="feedback--blurb">We welcome your feedback, so that we can continually improve this experience.</p>
