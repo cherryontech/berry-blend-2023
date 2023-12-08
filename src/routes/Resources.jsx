@@ -1,11 +1,16 @@
 import React from 'react';
 import '../Resources.css';
 import { recommendationData } from '../static/recommendationData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBatteryFull } from '@fortawesome/free-solid-svg-icons';
+import { faBatteryQuarter } from '@fortawesome/free-solid-svg-icons';
 
 const Resources = () => {
   const listedItems = recommendationData.map((item) => (
     <>
-      <p>{item.activity}</p>
+      <p>
+        <a href={item.photoUrl}>{item.activity}</a>
+      </p>
     </>
   ));
   const listedEnergy = recommendationData.map((item) => (
@@ -30,6 +35,12 @@ const Resources = () => {
         <div class="column">
           <h2 className="sub-head-right">Energy level</h2>
           <div> {listedEnergy}</div>
+          <div>
+            <FontAwesomeIcon icon={faBatteryFull} size="2x" />
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faBatteryQuarter} size="2x" />
+          </div>
         </div>
       </div>
     </div>
