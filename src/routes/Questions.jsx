@@ -4,15 +4,17 @@ import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 
 export const sumOfPoints = (totalPoints) => {
-  if (totalPoints >= 5 && totalPoints <= 10) {
-    console.log('Low Burnout');
+  if (totalPoints <= 10) {
+    // console.log('Low Burnout'); // TODO let's delete the console logs if you are happy with how the code works and no longer need it
     return 'Low Burnout';
   } else if (totalPoints >= 11 && totalPoints <= 20) {
-    console.log('Moderate Burnout');
+    // console.log('Moderate Burnout');
     return 'Moderate Burnout';
   } else if (totalPoints >= 21 && totalPoints <= 25) {
-    console.log('High Burnout');
+    // console.log('High Burnout');
     return 'High Burnout';
+  } else {
+    return '';
   }
 };
 
@@ -41,7 +43,7 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
   };
 
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
-  console.log(sumOfPoints(totalPoints), burnoutLevel(sumOfPoints(totalPoints)));
+
   const handleClickRecButton = () => {
     sumOfPoints(totalPoints);
     const burnoutText = burnoutLevel(sumOfPoints(totalPoints));

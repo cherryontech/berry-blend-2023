@@ -18,8 +18,9 @@ const RoutePaths = () => {
     setFinalSummary(newSummary);
   };
 
-  console.log('=> final Score', finalScore);
-  console.log('=> final summary', finalSummary);
+  /// TODO clean up if no longer needed
+  // console.log('=> final Score', finalScore);
+  // console.log('=> final summary', finalSummary);
   return (
     <>
       <Routes>

@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import ActivityRec from '../components/ActivityRec';
-import '../Recs.css';
 import AllResourcesButton from '../components/buttons/AllResourcesButton';
 import RecsData from '../static/recommendationData';
+import { sumOfPoints } from './Questions';
+import '../Recs.css';
 
 export default function Recommendations({ finalScore, finalSummary }) {
   const [showButton, setShowButton] = useState(false);
@@ -18,8 +19,15 @@ export default function Recommendations({ finalScore, finalSummary }) {
   const thumbsUp = () => {
     setShowButton(false);
   };
-  console.log(finalSummary);
+  // console.log(finalSummary);
 
+  //// NOTE sample below
+  //// What does the code do? It gets the description based on finalScore, lowercase it, then splits it into arr items by space, and keeps only the first word
+  //// How do you use it? console log energyRequiredBasedOnFinalPoints
+  //// see how you can then use it to filter on line 54
+  const energyRequiredBasedOnFinalPoints = sumOfPoints(finalScore).toLocaleLowerCase().split(' ')[0];
+
+  // TODO lets get rid of comments if you don't need it. You can still access changes via github
   /// TO
   // filter out high/md/low
   // sort/randomize
@@ -59,7 +67,7 @@ export default function Recommendations({ finalScore, finalSummary }) {
         }),
     [RecsData],
   );
-  console.log(lowEnergyRecs);
+  // console.log(lowEnergyRecs);
 
   return (
     <div ref={ref}>
@@ -84,6 +92,7 @@ export default function Recommendations({ finalScore, finalSummary }) {
     </div>
   );
 
+  ///// TODO delete me
   // <ActivityRec
   //         image="src/assets/walkingActivity.jpeg"
   //         activity="Walking"
