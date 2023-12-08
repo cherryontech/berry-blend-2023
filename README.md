@@ -1,15 +1,48 @@
-# berry-blend-2023
-Are you a fearless fighter in the workforce, trying to make your mark while navigating the unique challenges faced by underrepresented genders? Are you feeling the heat of burnout creeping in, threatening to douse your passion for your career? Look no further, because Blissful is here to be your guiding light on this challenging journey!
+<div align="center" id="top">
+  <a href="https://unmatched.netlify.app/">
+    <img src="https://github.com/cherryontech/berry-blend-2023/assets/67602583/de17963a-d3b7-41d4-a813-e5d6be7af61f" alt="Unmatched Logo" width="300px" style="margin: 0 auto; display: block;" />
+  </a>
+</div>
+<br/>
 
-**Product Description**
-Welcome to Blissful – an innovative wellness initiative addressing the pervasive issue of work burnout. Committed to enhancing the well-being of women and non-binary working professionals, our project distinguishes itself through a tailored approach. Unlike conventional solutions, we offer a diverse range of resources meticulously designed to combat work-related burnout. Join us in reshaping the workplace experience and fostering a healthier, more supportive professional environment. Together, let's create a space where well-being thrives.
+**Blisssfull** is an innovative wellness initiative addressing the pervasive issue of work burnout. Committed to enhancing the well-being of women and non-binary working professionals, our project is designed to recommend self-care activities for individuals experiencing burnout. Activities are recommended based on someone’s perceived energy level, separated from low and high, which is determined through a questionnaire. 
 
-**Live Site Link:**
-https://blisssful.netlify.app/
+🌐 [Live Site](https://blisssful.netlify.app/)
 
-**Instructions to host Blissful locally**
-1. Clone the Repository: use Git to clone the project repository locally 
-2. Navigate to Project Directory: move into the cloned project's directory
-3. Install Dependencies: install project dependencies using the appropriate package manager
-4. Set Environment Variables: configure environment variables locally if needed
-5. Run the Project: Start the local development server
+
+# Tech Stack:
+<div>
+<img src='https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7' />
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src='https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white' />
+<img src='https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white' />
+<img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=Jira&logoColor=white" />
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+</div>
+
+
+# Getting Started: 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/cherryontech/berry-blend-2023
+2. Navigate to the project:
+   ```bash
+   cd berry-blend-2023   
+3. Install the dependencies:
+   ``` bash
+   npm install
+4. Start the development server:
+   ``` bash
+   npm run dev
+
+
+# Team Members:
+**Product Managers:**
+Juhi Patel & Karen Rocha 
+
+**Developers:**
+Kati Ealey, Erina Perez, & Tie Hardy 
+
+**Designers:**
+Rebecca Jung & Ilgen Cevik 
+
