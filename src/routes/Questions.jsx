@@ -3,6 +3,16 @@ import '../Questions.css';
 import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 
+export const sumOfPoints = (totalPoints) => {
+  if (totalPoints >= 5 && totalPoints <= 10) {
+    console.log('Low Burnout');
+  } else if (totalPoints >= 11 && totalPoints <= 20) {
+    console.log('Moderate Burnout');
+  } else if (totalPoints >= 21 && totalPoints <= 25) {
+    console.log('High Burnout');
+  }
+};
+
 const Questions = ({ onFinalScore, onFinalSummary }) => {
   const [points, setPoints] = useState(Array(5).fill(0));
 
@@ -17,17 +27,12 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
     }
   };
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
-  const sumOfPoints = (totalPoints) => {
-    if (totalPoints >= 5 && totalPoints <= 10) {
-      console.log('Low Burnout');
-    } else if (totalPoints >= 11 && totalPoints <= 20) {
-      console.log('Moderate Burnout');
-    } else if (totalPoints >= 21 && totalPoints <= 25) {
-      console.log('High Burnout');
-    }
-  };
-  // sumOfPoints(totalPoints);
 
+  const handleClickRecButton = () => {
+    sumOfPoints(totalPoints);
+    onFinalScore(totalPoints);
+    // push to new page with RR
+  };
   // const [questionsSummary, setQuestionsSummary] = useState('');
   // const pointsSummary = () => {
   //   setQuestionsSummary(sumOfPoints);
@@ -65,7 +70,7 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
         <QuestionBank index={4} question="I often neglect self-care and leisure activities." onAnswer={handleAnswer} />
         <p>Total Score: {totalPoints}</p>
         {/* get recs button, on click, show console.log sumOfPoints */}
-        <GetRecsButton onClick={sumOfPoints} />
+        <GetRecsButton onClickRecButton={handleClickRecButton} />
       </div>
     </div>
   );

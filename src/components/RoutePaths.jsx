@@ -8,15 +8,18 @@ import Recs from '../routes/Recs';
 import { useState } from 'react';
 
 const RoutePaths = () => {
-  // const [finalScore, setFinalScore] = useState(0);
-  // const [finalSummary, setFinalSummary = useState('')]
+  const [finalScore, setFinalScore] = useState(0);
+  const [finalSummary, setFinalSummary] = useState('');
 
-  // const handleScore = (newScore) => {
-  //   setFinalScore(newScore)
-  // }
-  // const handleSummary = (newSummary) => {
-  //   setFinalSummary(newSummary)
-  // }
+  const handleScore = (newScore) => {
+    setFinalScore(newScore);
+  };
+  const handleSummary = (newSummary) => {
+    setFinalSummary(newSummary);
+  };
+
+  console.log('=> final Score', finalScore);
+  console.log('=> final summary', finalSummary);
 
   return (
     <>
@@ -24,7 +27,7 @@ const RoutePaths = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Questions" element={<Questions onFinalScore={handleScore} onFinalSummary={handleSummary} />} />
-        <Route path="/Recs" element={<Recs FinalScore={handleScore} FinalSummary={handleSummary} />} />
+        <Route path="/Recs" element={<Recs finalScore={finalScore} finalSummary={handleSummary} />} />
         {/* TODO delete Test file when it is no longer needed */}
         {/* <Route path="/Test" element={<Test />} /> */}
         {/* TODO need to figure out why error page route is not working */}

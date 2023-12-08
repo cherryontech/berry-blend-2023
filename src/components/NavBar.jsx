@@ -3,13 +3,13 @@ import '../App.css';
 
 const NavBar = () => {
   return (
-    <nav class="nav--container">
+    <nav className="nav--container">
       <img
-        class="nav--logo"
+        className="nav--logo"
         src="../assets/react.svg"
         alt="React Logo which will turn into App logo once given to us"
       />
-      <ul class="nav--links">
+      <ul className="nav--links">
         <NavLink to="/" className="navLink--style">
           <li>Home</li>
         </NavLink>

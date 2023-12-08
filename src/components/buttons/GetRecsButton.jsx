@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../Questions.css';
 
-const GetRecsButton = ({ sumOfPoints }) => {
+const GetRecsButton = ({ onClickRecButton }) => {
   const navigate = useNavigate();
 
   const navigateToRecommendations = () => {
@@ -15,7 +15,7 @@ const GetRecsButton = ({ sumOfPoints }) => {
   };
   return (
     <div className="recs--button">
-      <button className="recs--button" onClick={() => sumOfPoints(totalPoints)}>
+      <button className="recs--button" onClick={onClickRecButton}>
         Get Recommendations
       </button>
     </div>

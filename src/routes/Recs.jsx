@@ -19,15 +19,36 @@ export default function Recommendations({ finalScore, finalSummary }) {
     setShowButton(false);
   };
 
+  /// TO
+  // filter out high/md/low
+  // sort/randomize
+  // slice to reduce to 3
+  // map
+
+  const array = [1, 2, 3, 4, 5, 6];
+  const filteredData = array.filter((n) => n <= 5);
+  const randomized = filteredData.sort(() => Math.random() - 0.5);
+  const slicedData = randomized.slice(2);
+  const mapped = slicedData.map((n) => n + 1);
+
+  const crazyArray = [1, 2, 3, 4, 5, 6]
+    .filter((n) => n <= 5)
+    .sort(() => Math.random() - 0.5)
+    .slice(2)
+    .map((n) => n + 1);
+
+  console.log(filteredData, randomized, slicedData, mapped, crazyArray);
+
   const suggestedRecs = recommendations.map((recommended) => {
-    return;
-    <ActivityRec
-      image={recommended.photoUrl}
-      activity={recommended.activity}
-      description={recommended.blurb}
-      duration={recommended.durationInMinutes}
-      equipment={recommended.needsEquipment}
-    />;
+    return (
+      <ActivityRec
+        image={recommended.photoUrl}
+        activity={recommended.activity}
+        description={recommended.blurb}
+        duration={recommended.durationInMinutes}
+        equipment={recommended.needsEquipment}
+      />
+    );
   });
 
   return (
