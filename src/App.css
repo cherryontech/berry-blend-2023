@@ -25,6 +25,11 @@
 .navLink--style:hover {
   color: #a486e4;
 }
+.nav--logo {
+  height: 6.875rem;
+  width: 9.0625rem;
+  margin-left: 3rem;
+}
 /* CSS Styling of Left Side Circles  */
 .circles-container-left {
   height: 513px;
