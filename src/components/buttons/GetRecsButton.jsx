@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../Questions.css';
-import { useNavigate } from 'react-router-dom';
 
 const GetRecsButton = ({ disabled, onClickRecButton }) => {
   const navigate = useNavigate();
