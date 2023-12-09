@@ -11,8 +11,8 @@ const QuestionBank = ({ index, question, onAnswer, className }) => {
   };
 
   return (
-    <div className={`question--container ${className || ''}`}>
-      <div className="sub--text">
+    <div className={`question--bank--container ${className || ''}`}>
+      <div className="question--container">
         <p>{question}</p>
         <div className="answer--buttons">
           {[1, 2, 3, 4, 5].map((value) => (
