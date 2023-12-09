@@ -36,23 +36,20 @@ const Resources = () => {
         <h1> Our Resources </h1>
         <p>To access a list of all activities, look at this page</p>
       </div>
-
+      <h2 className="sub-head-left">
+        Activity &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp; Energy level
+      </h2>
       <div class="row">
         {' '}
-        <div class="column">
-          <h2 className="sub-head-left">Activity</h2>
-          <div> {listedItems}</div>
-        </div>
-        <div class="column">
-          <h2 className="sub-head-right">Energy level</h2>
-          <div> {listedEnergy}</div>
-          <div>
-            <FontAwesomeIcon icon={faBatteryFull} size="2x" />
-          </div>
-          <div>
-            <FontAwesomeIcon icon={faBatteryQuarter} size="2x" />
-          </div>
-        </div>
+        <div class="column">{listedItems}</div>
+        <div class="column2">{listedEnergy}</div>
+      </div>
+      <div>
+        <FontAwesomeIcon icon={faBatteryFull} size="2x" color="green" />
+      </div>
+      <div>
+        <FontAwesomeIcon icon={faBatteryQuarter} size="2x" color="red" />
       </div>
     </div>
   );
