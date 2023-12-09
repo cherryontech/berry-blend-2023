@@ -1,9 +1,43 @@
 import React, { useState } from 'react';
-import '../Questions.css';
 import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
+import '../Questions.css';
 
-const Questions = () => {
+// TODO keep old for now, in case there is ever a "moderate" activity
+// as of 12/9/23 there are only high/low
+export const sumOfPoints_old = (totalPoints) => {
+  if (totalPoints <= 10) {
+    return 'Low Burnout';
+  } else if (totalPoints >= 11 && totalPoints <= 20) {
+    return 'Moderate Burnout';
+  } else if (totalPoints >= 21 && totalPoints <= 25) {
+    return 'High Burnout';
+  } else {
+    return '';
+  }
+};
+
+export const sumOfPoints = (totalPoints) => {
+  if (totalPoints <= 15) {
+    return 'Low Burnout';
+  } else if (totalPoints >= 16 && totalPoints <= 25) {
+    return 'High Burnout';
+  } else {
+    return '';
+  }
+};
+
+export const burnoutLevel = (pointsSummary) => {
+  if (pointsSummary === 'Low Burnout') {
+    return "You're vibing in the low burnout zone. Life is a chill playlist, and stress is just a background beat. Keep riding those good vibes!";
+  } else if (pointsSummary == 'Moderate Burnout') {
+    return "You're cruising in the moderate burnout lane. Life's got some bumps, but you're handling it like a pro. Time to sprinkle in some self-love, rest a little bit and recharge.";
+  } else if (pointsSummary === 'High Burnout') {
+    return "Uh-oh, you're in the high burnout zone! Your chill has gone missing, and stress is throwing a wild party. Time to hit pause, find your zen, and reclaim your cool. Burnout ain't got nothing on you!";
+  }
+};
+
+const Questions = ({ onFinalScore, onFinalSummary }) => {
   const [points, setPoints] = useState(Array(5).fill(0));
   const [questions, setQuestions] = useState(Array(5).fill(false));
 
@@ -29,8 +63,16 @@ const Questions = () => {
   // This should move into the Recs component
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
 
+  const handleClickRecButton = () => {
+    sumOfPoints(totalPoints);
+    const burnoutText = burnoutLevel(sumOfPoints(totalPoints));
+    onFinalScore(totalPoints);
+    onFinalSummary(burnoutText);
+
+    // push to new page with RR
+  };
   return (
-    <div className="questions--container">
+    <div className="questions--content">
       <div className="main--text">
         <h1>Burnout Assessment</h1>
         <h2>
@@ -67,8 +109,9 @@ const Questions = () => {
           onAnswer={handleAnswer}
           className={questions[4] ? '' : 'unanswered'}
         />
+        <p className="totalPoints--display">Total Score: {totalPoints}</p>
         {!areAllQuestionsAnswered && <p className="error-message">All questions are required!</p>}
-        <GetRecsButton disabled={!areAllQuestionsAnswered} />
+        <GetRecsButton disabled={!areAllQuestionsAnswered} onClickRecButton={handleClickRecButton} />
       </div>
     </div>
   );

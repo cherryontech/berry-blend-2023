@@ -1,10 +1,10 @@
 import React from 'react';
-import { recommendationData } from '../static/recommendationData';
+import recommendations from '../static/recommendationData';
 
 import '../Test.css';
 
 export const Test = () => {
-  const listedItems = recommendationData.map((item) => (
+  const listedItems = recommendations.map((item) => (
     <>
       <p>{item.activity}</p>
     </>
@@ -12,7 +12,7 @@ export const Test = () => {
 
   return (
     <div>
-      <h3 className="test3">Test page to be deleted when done</h3>
+      <h3 className="test3">Test page to be deleted when done!</h3>
       <div>
         Todo <br />
         1. add in the recommendation list

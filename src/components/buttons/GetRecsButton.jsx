@@ -1,14 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../Questions.css';
+import { useNavigate } from 'react-router-dom';
 
-const GetRecsButton = ({ disabled }) => {
+const GetRecsButton = ({ disabled, onClickRecButton }) => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
     if (disabled) {
-      alert('Answer all questions before getting recommendations.');
+      alert('You must answer all questions before getting recommendations.');
     } else {
+      onClickRecButton();
       navigate('/Recs');
     }
   };

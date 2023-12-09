@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const HomeButton = () => (
-  <button className="home--button" onClick={(event) => (window.location.href = '/Questions')}>
-    Get Started
-  </button>
-);
+const HomeButton = () => {
+  const handleHomeButton = () => {
+    navigate('/Questions');
+  };
+  const navigate = useNavigate();
+  return (
+    <button className="home--button" onClick={handleHomeButton}>
+      Get Started
+    </button>
+  );
+};
 
 export default HomeButton;
