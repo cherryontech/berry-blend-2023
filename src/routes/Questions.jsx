@@ -5,11 +5,11 @@ import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 
 const Questions = () => {
   const [points, setPoints] = useState(Array(5).fill(0));
-  const [unansweredQuestions, setUnansweredQuestions] = useState(Array(5).fill(false));
+  const [questions, setQuestions] = useState(Array(5).fill(false));
 
-  const areAllQuestionsAnswered = unansweredQuestions.every((answered) => !answered);
+  const areAllQuestionsAnswered = questions.every((answered) => answered);
   console.log('areAllQuestionsAnswered:', areAllQuestionsAnswered);
-  console.log('unansweredQuestions:', unansweredQuestions);
+  console.log('questions:', questions);
 
   const handleAnswer = (questionIndex, pointsValue) => {
     const currentPointsValue = points[questionIndex];
@@ -20,9 +20,9 @@ const Questions = () => {
       setPoints(newPoints);
 
       // Check for unanswered questions
-      const newUnansweredQuestions = [...unansweredQuestions];
-      newUnansweredQuestions[questionIndex] = false;
-      setUnansweredQuestions(newUnansweredQuestions);
+      const newQuestions = [...Questions];
+      newQuestions[questionIndex] = true;
+      setQuestions(newQuestions);
     }
   };
 
@@ -41,31 +41,31 @@ const Questions = () => {
           index={0}
           question="I often feel exhausted and drained from work or daily responsibilities."
           onAnswer={handleAnswer}
-          className={unansweredQuestions[0] ? 'unanswered' : ''}
+          className={questions[0] ? '' : 'unanswered'}
         />
         <QuestionBank
           index={1}
           question="I have trouble relaxing and disconnecting from work or other stressors."
           onAnswer={handleAnswer}
-          className={unansweredQuestions[1] ? 'unanswered' : ''}
+          className={questions[1] ? '' : 'unanswered'}
         />
         <QuestionBank
           index={2}
           question="I frequently experience feelings of irritability, frustration, or even anger."
           onAnswer={handleAnswer}
-          className={unansweredQuestions[2] ? 'unanswered' : ''}
+          className={questions[2] ? '' : 'unanswered'}
         />
         <QuestionBank
           index={3}
           question="I find it challenging to maintain focus and productivity."
           onAnswer={handleAnswer}
-          className={unansweredQuestions[3] ? 'unanswered' : ''}
+          className={questions[3] ? '' : 'unanswered'}
         />
         <QuestionBank
           index={4}
           question="I often neglect self-care and leisure activities."
           onAnswer={handleAnswer}
-          className={unansweredQuestions[4] ? 'unanswered' : ''}
+          className={questions[4] ? '' : 'unanswered'}
         />
         {!areAllQuestionsAnswered && <p className="error-message">All questions are required!</p>}
         <GetRecsButton disabled={!areAllQuestionsAnswered} />

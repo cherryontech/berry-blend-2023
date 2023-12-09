@@ -1,13 +1,15 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../../Questions.css';
 
 const GetRecsButton = ({ disabled }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    if (!disabled) {
-      history.push('/Recs');
+    if (disabled) {
+      alert('Answer all questions before getting recommendations.');
+    } else {
+      navigate('/Recs');
     }
   };
 
