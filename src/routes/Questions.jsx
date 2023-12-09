@@ -4,7 +4,29 @@ import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 import Greeting from '../components/Greeting.jsx';
 
-const Questions = () => {
+export const sumOfPoints = (totalPoints) => {
+  if (totalPoints <= 10) {
+    return 'Low Burnout';
+  } else if (totalPoints >= 11 && totalPoints <= 20) {
+    return 'Moderate Burnout';
+  } else if (totalPoints >= 21 && totalPoints <= 25) {
+    return 'High Burnout';
+  } else {
+    return '';
+  }
+};
+
+export const burnoutLevel = (pointsSummary) => {
+  if (pointsSummary === 'Low Burnout') {
+    return "You're vibing in the low burnout zone. Life is a chill playlist, and stress is just a background beat. Keep riding those good vibes!";
+  } else if (pointsSummary == 'Moderate Burnout') {
+    return "You're cruising in the moderate burnout lane. Life's got some bumps, but you're handling it like a pro. Time to sprinkle in some self-love, rest a little bit and recharge.";
+  } else if (pointsSummary === 'High Burnout') {
+    return "Uh-oh, you're in the high burnout zone! Your chill has gone missing, and stress is throwing a wild party. Time to hit pause, find your zen, and reclaim your cool. Burnout ain't got nothing on you!";
+  }
+};
+
+const Questions = ({ onFinalScore, onFinalSummary }) => {
   const [points, setPoints] = useState(Array(5).fill(0));
 
   const handleAnswer = (questionIndex, pointsValue) => {
@@ -20,6 +42,14 @@ const Questions = () => {
 
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
 
+  const handleClickRecButton = () => {
+    sumOfPoints(totalPoints);
+    const burnoutText = burnoutLevel(sumOfPoints(totalPoints));
+    onFinalScore(totalPoints);
+    onFinalSummary(burnoutText);
+
+    // push to new page with RR
+  };
   return (
     <div className="questions--content">
       <div className="main--text">
@@ -51,7 +81,7 @@ const Questions = () => {
         <QuestionBank index={4} question="I often neglect self-care and leisure activities." onAnswer={handleAnswer} />
         <p className="totalPoints--display">Total Score: {totalPoints}</p>
 
-        <GetRecsButton />
+        <GetRecsButton onClickRecButton={handleClickRecButton} />
       </div>
     </div>
   );
