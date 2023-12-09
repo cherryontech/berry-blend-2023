@@ -49,7 +49,7 @@ const Questions = () => {
           onAnswer={handleAnswer}
         />
         <QuestionBank index={4} question="I often neglect self-care and leisure activities." onAnswer={handleAnswer} />
-        <p>Total Score: {totalPoints}</p>
+        <p className="totalPoints--display">Total Score: {totalPoints}</p>
 
         <GetRecsButton />
       </div>
