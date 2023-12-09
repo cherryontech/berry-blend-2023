@@ -54,7 +54,7 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
       setPoints(newPoints);
 
       // Check for unanswered questions
-      const newQuestions = [...Questions];
+      const newQuestions = [...questions];
       newQuestions[questionIndex] = true;
       setQuestions(newQuestions);
     }
