@@ -15,7 +15,6 @@ const Resources = () => {
   ));
 
   const listedEnergy = RecsData.map((item) => {
-    console.log(item.energyRequired);
 
     let icon;
     if (item.energyRequired === 'high') {
@@ -40,27 +39,15 @@ const Resources = () => {
         Activity &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp; Energy level
       </h2>
-      <div class="row">
-<<<<<<< HEAD
-        {' '}
-        <div class="column">{listedItems}</div>
-        <div class="column2">{listedEnergy}</div>
+      <div className="row">
+        <div className="column">{listedItems}</div>
+        <div className="column2">{listedEnergy}</div>
       </div>
       <div>
         <FontAwesomeIcon icon={faBatteryFull} size="2x" color="green" />
       </div>
       <div>
         <FontAwesomeIcon icon={faBatteryQuarter} size="2x" color="red" />
-=======
-        <div class="column">
-          <h2 className="sub-head-left">Activity</h2>
-          <div> {listedItems}</div>
-        </div>
-        <div class="column">
-          <h2 className="sub-head-right">Energy level</h2>
-          <div> {listedEnergy}</div>
-        </div>
->>>>>>> 2799c9e801f1291cd1527eeabcada556f465959c
       </div>
     </div>
   );
