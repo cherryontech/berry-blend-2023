@@ -13,11 +13,22 @@ const Resources = () => {
       </p>
     </>
   ));
-  const listedEnergy = recommendationData.map((item) => (
-    <>
-      <p>{item.energyRequired}</p>
-    </>
-  ));
+
+  const listedEnergy = recommendationData.map((item) => {
+    console.log(item.energyRequired);
+
+    let icon;
+    if (item.energyRequired === 'high') {
+      icon = faBatteryFull;
+    } else {
+      icon = faBatteryQuarter;
+    }
+    return (
+      <>
+        <p>{item.energyRequired}</p>
+      </>
+    );
+  });
 
   return (
     <div className="resources--container">
