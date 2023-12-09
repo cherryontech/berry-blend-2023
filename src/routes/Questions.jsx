@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Questions.css';
 import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
+import Greeting from '../components/Greeting.jsx';
 
 const Questions = () => {
   const [points, setPoints] = useState(Array(5).fill(0));
@@ -20,9 +21,9 @@ const Questions = () => {
   const totalPoints = points.reduce((acc, curr) => acc + curr, 0);
 
   return (
-    <div className="questions--container">
+    <div className="questions--content">
       <div className="main--text">
-        <h1>Heading (Need Copy)</h1>
+        <h1>Burnout Assesement</h1>
         <h2>
           On a scale of 1 to 5, with 1 being strongly disagree and 5 being strongly agree, please rate the following
           statements:
