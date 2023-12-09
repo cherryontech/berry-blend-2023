@@ -18,4 +18,5 @@ const GetRecsButton = ({ onClickRecButton }) => {
   );
 };
 
+
 export default GetRecsButton;

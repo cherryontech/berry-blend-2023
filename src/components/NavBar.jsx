@@ -3,12 +3,8 @@ import '../App.css';
 
 const NavBar = () => {
   return (
-    <nav className="nav--container">
-      <img
-        className="nav--logo"
-        src="../assets/react.svg"
-        alt="React Logo which will turn into App logo once given to us"
-      />
+    <nav class="nav--container">
+      <img className="nav--logo" src="src/assets/blissfulLogo.jpg" alt="Blissful Website Logo with a cloud above it" />
       <ul className="nav--links">
         <NavLink to="/" className="navLink--style">
           <li>Home</li>

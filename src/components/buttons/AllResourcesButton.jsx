@@ -1,14 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 
 export default function AllResourcesButton() {
-  const navigate = useNavigate();
-
-  const navigateToResources = () => {
-    // 👇️ navigate to /recommendation page
+  const handleAllResourcesButton = () => {
     navigate('/Resources');
   };
+  const navigate = useNavigate();
+
   return (
-    <button className="resources--button" onClick={navigateToResources}>
+    <button className="resources--button" onClick={handleAllResourcesButton}>
       Explore All Resources
     </button>
   );

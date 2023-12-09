@@ -10,9 +10,9 @@ const QuestionBank = ({ index, question, onAnswer }) => {
   };
 
   return (
-    <div className="question--container">
-      <div className="sub--text">
-        <p>{question}</p>
+    <div className="question--bank--container">
+      <div className="question--container">
+        <p className="question">{question}</p>
         <div className="answer--buttons">
           {[1, 2, 3, 4, 5].map((value) => (
             <button

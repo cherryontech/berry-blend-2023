@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Questions.css';
 import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
+import Greeting from '../components/Greeting.jsx';
 
 export const sumOfPoints = (totalPoints) => {
   if (totalPoints <= 10) {
@@ -50,9 +51,9 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
     // push to new page with RR
   };
   return (
-    <div className="questions--container">
+    <div className="questions--content">
       <div className="main--text">
-        <h1>Heading (Need Copy)</h1>
+        <h1>Burnout Assesement</h1>
         <h2>
           On a scale of 1 to 5, with 1 being strongly disagree and 5 being strongly agree, please rate the following
           statements:
@@ -78,7 +79,7 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
           onAnswer={handleAnswer}
         />
         <QuestionBank index={4} question="I often neglect self-care and leisure activities." onAnswer={handleAnswer} />
-        <p>Total Score: {totalPoints}</p>
+        <p className="totalPoints--display">Total Score: {totalPoints}</p>
 
         <GetRecsButton onClickRecButton={handleClickRecButton} />
       </div>
