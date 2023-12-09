@@ -83,7 +83,7 @@
 }
 .totalPoints--display {
   font-size: 2rem;
-  font-family: 'Quiclsand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .recs--button {
@@ -106,4 +106,18 @@
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.recs--button:hover {
+  background-color: #612cb7; /* Darker purple on hover */
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+}
+
+.unanswered {
+  color: red;
+  border: 2px solid red;
 }
