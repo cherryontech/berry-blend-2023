@@ -1,12 +1,12 @@
 import React from 'react';
 import '../Resources.css';
-import { recommendationData } from '../static/recommendationData';
+import RecsData from '../static/recommendationData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBatteryFull } from '@fortawesome/free-solid-svg-icons';
 import { faBatteryQuarter } from '@fortawesome/free-solid-svg-icons';
 
 const Resources = () => {
-  const listedItems = recommendationData.map((item) => (
+  const listedItems = RecsData.map((item) => (
     <>
       <p>
         <a href={item.photoUrl}>{item.activity}</a>
@@ -14,7 +14,7 @@ const Resources = () => {
     </>
   ));
 
-  const listedEnergy = recommendationData.map((item) => {
+  const listedEnergy = RecsData.map((item) => {
     console.log(item.energyRequired);
 
     let icon;
@@ -38,7 +38,6 @@ const Resources = () => {
       </div>
 
       <div class="row">
-        {' '}
         <div class="column">
           <h2 className="sub-head-left">Activity</h2>
           <div> {listedItems}</div>
@@ -46,12 +45,6 @@ const Resources = () => {
         <div class="column">
           <h2 className="sub-head-right">Energy level</h2>
           <div> {listedEnergy}</div>
-          <div>
-            <FontAwesomeIcon icon={faBatteryFull} size="2x" />
-          </div>
-          <div>
-            <FontAwesomeIcon icon={faBatteryQuarter} size="2x" />
-          </div>
         </div>
       </div>
     </div>
