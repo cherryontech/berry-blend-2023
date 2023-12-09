@@ -18,8 +18,6 @@ export default function Recommendations() {
     setShowButton(false);
   };
 
-  console.log(showButton);
-
   return (
     <div ref={ref}>
       <header className="rec--header">
