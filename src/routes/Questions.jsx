@@ -5,13 +5,10 @@ import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
 
 export const sumOfPoints = (totalPoints) => {
   if (totalPoints <= 10) {
-    // console.log('Low Burnout'); // TODO let's delete the console logs if you are happy with how the code works and no longer need it
     return 'Low Burnout';
   } else if (totalPoints >= 11 && totalPoints <= 20) {
-    // console.log('Moderate Burnout');
     return 'Moderate Burnout';
   } else if (totalPoints >= 21 && totalPoints <= 25) {
-    // console.log('High Burnout');
     return 'High Burnout';
   } else {
     return '';
