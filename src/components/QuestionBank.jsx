@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import '../Questions.css';
 
-const QuestionBank = ({ index, question, onAnswer }) => {
+const QuestionBank = ({ index, question, onAnswer, className }) => {
   const [selectedValue, setSelectedValue] = useState(null);
 
   const handleButtonClick = (value) => {
@@ -10,7 +11,7 @@ const QuestionBank = ({ index, question, onAnswer }) => {
   };
 
   return (
-    <div className="question--container">
+    <div className={`question--container ${className || ''}`}>
       <div className="sub--text">
         <p>{question}</p>
         <div className="answer--buttons">
