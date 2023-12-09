@@ -12,7 +12,7 @@ export const Test = () => {
 
   return (
     <div>
-      <h3 className="test3">Test page to be deleted when done</h3>
+      <h3 className="test3">Test page to be deleted when done!</h3>
       <div>
         Todo <br />
         1. add in the recommendation list
