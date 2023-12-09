@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
-import '../Questions.css';
 import QuestionBank from '../components/QuestionBank.jsx';
 import GetRecsButton from '../components/buttons/GetRecsButton.jsx';
-import Greeting from '../components/Greeting.jsx';
+import '../Questions.css';
 
-export const sumOfPoints = (totalPoints) => {
+// TODO keep old for now, in case there is ever a "moderate" activity
+// as of 12/9/23 there are only high/low
+export const sumOfPoints_old = (totalPoints) => {
   if (totalPoints <= 10) {
     return 'Low Burnout';
   } else if (totalPoints >= 11 && totalPoints <= 20) {
     return 'Moderate Burnout';
   } else if (totalPoints >= 21 && totalPoints <= 25) {
+    return 'High Burnout';
+  } else {
+    return '';
+  }
+};
+
+export const sumOfPoints = (totalPoints) => {
+  if (totalPoints <= 15) {
+    return 'Low Burnout';
+  } else if (totalPoints >= 16 && totalPoints <= 25) {
     return 'High Burnout';
   } else {
     return '';
@@ -53,7 +64,7 @@ const Questions = ({ onFinalScore, onFinalSummary }) => {
   return (
     <div className="questions--content">
       <div className="main--text">
-        <h1>Burnout Assesement</h1>
+        <h1>Burnout Assessment</h1>
         <h2>
           On a scale of 1 to 5, with 1 being strongly disagree and 5 being strongly agree, please rate the following
           statements:

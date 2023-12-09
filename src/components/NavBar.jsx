@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import blissfulLogo from '../assets/blissfulLogo.jpg';
 import '../App.css';
 
 const NavBar = () => {
   return (
-    <nav class="nav--container">
-      <img className="nav--logo" src="src/assets/blissfulLogo.jpg" alt="Blissful Website Logo with a cloud above it" />
+    <nav className="nav--container">
+      <img className="nav--logo" src={blissfulLogo} alt="Blissful Website Logo with a cloud above it" />
       <ul className="nav--links">
         <NavLink to="/" className="navLink--style">
           <li>Home</li>
