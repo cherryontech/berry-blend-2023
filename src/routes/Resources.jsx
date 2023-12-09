@@ -1,12 +1,12 @@
 import React from 'react';
 import '../Resources.css';
-import { recommendationData } from '../static/recommendationData';
+import RecsData from '../static/recommendationData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBatteryFull } from '@fortawesome/free-solid-svg-icons';
 import { faBatteryQuarter } from '@fortawesome/free-solid-svg-icons';
 
 const Resources = () => {
-  const listedItems = recommendationData.map((item) => (
+  const listedItems = RecsData.map((item) => (
     <>
       <p>
         <a href={item.photoUrl}>{item.activity}</a>
@@ -14,7 +14,7 @@ const Resources = () => {
     </>
   ));
 
-  const listedEnergy = recommendationData.map((item) => {
+  const listedEnergy = RecsData.map((item) => {
     console.log(item.energyRequired);
 
     let icon;
@@ -41,6 +41,7 @@ const Resources = () => {
         &nbsp;&nbsp;&nbsp;&nbsp; Energy level
       </h2>
       <div class="row">
+<<<<<<< HEAD
         {' '}
         <div class="column">{listedItems}</div>
         <div class="column2">{listedEnergy}</div>
@@ -50,6 +51,16 @@ const Resources = () => {
       </div>
       <div>
         <FontAwesomeIcon icon={faBatteryQuarter} size="2x" color="red" />
+=======
+        <div class="column">
+          <h2 className="sub-head-left">Activity</h2>
+          <div> {listedItems}</div>
+        </div>
+        <div class="column">
+          <h2 className="sub-head-right">Energy level</h2>
+          <div> {listedEnergy}</div>
+        </div>
+>>>>>>> 2799c9e801f1291cd1527eeabcada556f465959c
       </div>
     </div>
   );
